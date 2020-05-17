@@ -1,0 +1,36 @@
+.Home {
+    overflow: hidden;
+}
+
+.carousel-picture {
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-picture.img0 {
+    background-image: url("../../Images/IMG_0.jpg");
+}
+
+.carousel-picture.img1 {
+    background-image: url("../../Images/IMG_1.jpg");
+    background-position: center 35%;
+}
+
+.carousel-picture.img2 {
+    background-image: url("../../Images/IMG_2.jpg");
+}
+
+@media only screen and (max-width: 960px) {
+    .carousel-picture {
+        height: 500px;
+    }
+
+    .carousel-picture.img1 {
+        background-position: 40% 35%;
+    }
+
+    .carousel-picture.img2 {
+        background-position: 80% 35%;
+    }
+}
