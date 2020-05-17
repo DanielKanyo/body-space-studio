@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
+import Menu from "../Menu/Menu";
 import { ROUTES } from "../../Constants/routes";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
         background: "#b59a3f",
         position: "fixed",
         zIndex: 10
+    },
+    menuButton: {
+        "&:focus": {
+            outline: "none"
+        }
     },
     linkButton: {
         marginLeft: 12,
@@ -33,18 +39,38 @@ const useStyles = makeStyles((theme) => ({
         display: "none",
         [theme.breakpoints.up("md")]: {
             display: "flex",
-        },
+        }
     },
     sectionMobile: {
         display: "flex",
         [theme.breakpoints.up("md")]: {
             display: "none",
-        },
-    },
+        }
+    }
 }));
 
 const Navigation = () => {
     const classes = useStyles();
+
+    const [drawerVisibility, setDrawerVisibility] = useState(false);
+    const navigationItems = [
+        {
+            routeTo: ROUTES.home,
+            label: "Home",
+        },
+        {
+            routeTo: ROUTES.gallery,
+            label: "Gallery"
+        },
+        {
+            routeTo: ROUTES.machines,
+            label: "Machines"
+        },
+        {
+            routeTo: ROUTES.contact,
+            label: "Contact"
+        }
+    ];
 
     return (
         <div className={classes.root}>
@@ -55,27 +81,42 @@ const Navigation = () => {
                     </Typography>
 
                     <div className={classes.sectionDesktop}>
-                        <Button component={Link} to={ROUTES.gallery} color="inherit" className={classes.linkButton}>
-                            Gallery
-                        </Button>
-                        <Button component={Link} to={ROUTES.contact} color="inherit" className={classes.linkButton}>
-                            Machines
-                        </Button>
-                        <Button component={Link} to={ROUTES.contact} color="inherit" className={classes.linkButton}>
-                            Contact
-                        </Button>
-                        <Button component={Link} to={ROUTES.home} color="inherit" className={classes.linkButton}>
-                            Home
-                        </Button>
+                        {
+                            navigationItems.map((item, i) => {
+                                return (
+                                    <Button
+                                        key={i}
+                                        component={Link}
+                                        to={item.routeTo}
+                                        color="inherit"
+                                        className={classes.linkButton}
+                                    >
+                                        {item.label}
+                                    </Button>
+                                )
+                            })
+                        }
                     </div>
 
                     <div className={classes.sectionMobile}>
-                        <IconButton edge="start" color="inherit" aria-label="menu">
+                        <IconButton
+                            edge="start"
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="menu"
+                            onClick={() => setDrawerVisibility(true)}
+                        >
                             <MenuIcon />
                         </IconButton>
                     </div>
                 </Toolbar>
             </AppBar>
+
+            <Menu
+                navigationItems={navigationItems}
+                drawerVisibility={drawerVisibility}
+                setDrawerVisibility={setDrawerVisibility}
+            />
         </div>
     );
 };

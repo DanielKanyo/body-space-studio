@@ -19,6 +19,7 @@
 
 .carousel-picture.img2 {
     background-image: url("../../Images/IMG_2.jpg");
+    background-position: center 35%;
 }
 
 @media only screen and (max-width: 960px) {
@@ -31,6 +32,6 @@
     }
 
     .carousel-picture.img2 {
-        background-position: 80% 35%;
+        background-position: 40% center;
     }
 }
