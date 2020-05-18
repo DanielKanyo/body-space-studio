@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     appbar: {
         background: "#b59a3f",
         position: "fixed",
-        zIndex: 10
+        zIndex: 20
     },
     menuButton: {
         "&:focus": {
