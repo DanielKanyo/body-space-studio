@@ -12,6 +12,9 @@ import ImageIcon from "@material-ui/icons/Image";
 import AirlineSeatFlatIcon from "@material-ui/icons/AirlineSeatFlat";
 import EmailIcon from "@material-ui/icons/Email";
 import HelpIcon from "@material-ui/icons/Help";
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+
+import { Routes } from "../../Constants/routes";
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -28,20 +31,21 @@ const Menu = (props) => {
     const classes = useStyles();
     const {
         drawerVisibility,
-        setDrawerVisibility,
-        navigationItems
+        setDrawerVisibility
     } = props;
 
     const listItemIconSwitch = (param) => {
         switch (param) {
-            case "Home":
+            case "home":
                 return <HomeIcon />;
-            case "Gallery":
+            case "gallery":
                 return <ImageIcon />;
-            case "Machines":
+            case "machines":
                 return <AirlineSeatFlatIcon />;
-            case "Contact":
+            case "contact":
                 return <EmailIcon />;
+            case "pricelist":
+                return <MonetizationOnIcon />;
             default:
                 console.error(`Unknown paramtere: ${param}`);
                 return <HelpIcon />;
@@ -56,19 +60,19 @@ const Menu = (props) => {
         >
             <List className={classes.list}>
                 {
-                    navigationItems.map((item, i) => {
+                    Routes.map((route, i) => {
                         return (
                             <ListItem
                                 button
                                 component={Link}
-                                to={item.routeTo}
+                                to={route.path}
                                 className={classes.listItem}
                                 key={i}
                             >
                                 <ListItemIcon>
-                                    {listItemIconSwitch(item.label)}
+                                    {listItemIconSwitch(route.id)}
                                 </ListItemIcon>
-                                <ListItemText primary={item.label} />
+                                <ListItemText primary={route.label} />
                             </ListItem>
                         )
                     })

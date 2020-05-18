@@ -10,7 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import Menu from "../Menu/Menu";
-import { ROUTES } from "../../Constants/routes";
+import { Routes } from "../../Constants/routes";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -53,24 +53,6 @@ const Navigation = () => {
     const classes = useStyles();
 
     const [drawerVisibility, setDrawerVisibility] = useState(false);
-    const navigationItems = [
-        {
-            routeTo: ROUTES.home,
-            label: "Home",
-        },
-        {
-            routeTo: ROUTES.gallery,
-            label: "Gallery"
-        },
-        {
-            routeTo: ROUTES.machines,
-            label: "Machines"
-        },
-        {
-            routeTo: ROUTES.contact,
-            label: "Contact"
-        }
-    ];
 
     return (
         <div className={classes.root}>
@@ -82,16 +64,16 @@ const Navigation = () => {
 
                     <div className={classes.sectionDesktop}>
                         {
-                            navigationItems.map((item, i) => {
+                            Routes.map((route, i) => {
                                 return (
                                     <Button
                                         key={i}
                                         component={Link}
-                                        to={item.routeTo}
+                                        to={route.path}
                                         color="inherit"
                                         className={classes.linkButton}
                                     >
-                                        {item.label}
+                                        {route.label}
                                     </Button>
                                 )
                             })
@@ -113,7 +95,6 @@ const Navigation = () => {
             </AppBar>
 
             <Menu
-                navigationItems={navigationItems}
                 drawerVisibility={drawerVisibility}
                 setDrawerVisibility={setDrawerVisibility}
             />

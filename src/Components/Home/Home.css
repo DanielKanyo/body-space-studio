@@ -1,25 +1,123 @@
 .Home {
-    overflow: hidden;
+    padding-top: 40px;
 }
 
 .carousel-picture {
     height: 800px;
     background-size: cover;
     background-position: center;
-}
-
-.carousel-picture.img0 {
-    background-image: url("../../Images/IMG_0.jpg");
+    background-repeat: no-repeat;
 }
 
 .carousel-picture.img1 {
-    background-image: url("../../Images/IMG_1.jpg");
-    background-position: center 35%;
+    background-image: url("../../Images/IMG_3.jpg");
+    background-position: center 40%;
 }
 
 .carousel-picture.img2 {
     background-image: url("../../Images/IMG_2.jpg");
-    background-position: center 35%;
+}
+
+.carousel-picture.img3 {
+    background-image: url("../../Images/IMG_1.jpg");
+    background-position: center 40%;
+}
+
+.machines-preview {
+    background-color: #54361a;
+    position: relative;
+}
+
+.machines-preview .content {
+    padding: 100px 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.machines-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url("../../Images/IMG_4.jpg");
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.text-and-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50px;
+}
+
+.text-and-btn-container .text {
+    margin-bottom: 30px;
+}
+
+.pricelist-preview {
+    height: 500px;
+    display: flex;
+    position: relative;
+    transition: 0.5s;
+}
+
+.hider {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pricelist-preview:hover .hider {
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pricelist-img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.pricelist-img.img1 {
+    background-image: url("../../Images/IMG_7.jpg");
+}
+
+.pricelist-img.img2 {
+    background-image: url("../../Images/IMG_4.jpg");
+}
+
+.pricelist-img.img3 {
+    background-image: url("../../Images/IMG_9.jpg");
+}
+
+.button-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-preview {
+    height: 400px;
+}
+
+.contact-preview > div > div > div {
+    height: 400px !important;
+}
+
+@media only screen and (max-width: 1420px) {
+    .carousel-picture {
+        height: 650px;
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -33,5 +131,17 @@
 
     .carousel-picture.img2 {
         background-position: 40% center;
+    }
+
+    .machines-preview .content {
+        padding: 50px 50px;
+    }
+
+    .text-and-btn-container {
+        font-size: 25px;
+    }
+
+    .pricelist-preview {
+        height: 150px;
     }
 }
