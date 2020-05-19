@@ -40,7 +40,7 @@ const Menu = (props) => {
                 return <HomeIcon />;
             case "gallery":
                 return <ImageIcon />;
-            case "machines":
+            case "devices":
                 return <AirlineSeatFlatIcon />;
             case "contact":
                 return <EmailIcon />;

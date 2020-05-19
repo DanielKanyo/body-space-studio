@@ -1,0 +1,12 @@
+.Footer {
+    background-color: #54361a;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.social-section {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}

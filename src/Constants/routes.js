@@ -7,12 +7,12 @@ export const Routes = [
     {
         id: "gallery",
         path: "/",
-        label: "Slike"
+        label: "Galerija"
     },
     {
-        id: "machines",
-        path: "/",
-        label: "Mašine"
+        id: "devices",
+        path: "/devices",
+        label: "Usluge i Aparate"
     },
     {
         id: "pricelist",

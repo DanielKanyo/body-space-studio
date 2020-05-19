@@ -1,5 +1,5 @@
 import React from "react";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
 const style = {
     width: "100%",
@@ -13,11 +13,12 @@ const GoogleMap = (props) => {
                 google={props.google}
                 style={style}
                 initialCenter={{
-                    lat: 45.2531289,
-                    lng: 19.8332593
+                    lat: 45.2541117,
+                    lng: 19.8347184
                 }}
                 zoom={15}
             >
+                <Marker title={"Ognjena Price 1 | Novi Sad"} />
             </Map>
         </div>
     );
