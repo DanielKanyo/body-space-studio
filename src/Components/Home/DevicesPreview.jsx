@@ -8,7 +8,7 @@ import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
     button: {
-        color: "white",
+        color: "white !important",
         borderColor: "white",
         outline: "none !important",
         fontSize: 14,

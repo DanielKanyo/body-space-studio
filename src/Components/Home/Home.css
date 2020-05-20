@@ -113,11 +113,25 @@
 }
 
 .contact-preview {
+    display: flex;
     height: 400px;
 }
 
 .contact-preview > div > div > div {
     height: 400px !important;
+}
+
+.contact-preview > div > div > div > div {
+    width: calc(100% - 400px) !important;
+    height: auto !important;
+}
+
+.building-img {
+    height: 100%;
+    width: 400px;
+    background-image: url("../../Images/IMG_14.jpg");
+    background-size: cover;
+    background-position: center 0%;
 }
 
 @media only screen and (max-width: 1420px) {
@@ -167,5 +181,13 @@
 @media only screen and (max-width: 600px) {
     .Home {
         padding-top: 56px;
+    }
+
+    .contact-preview > div > div > div > div {
+        width: calc(100% - 50%) !important;
+    }
+    
+    .building-img {
+        width: 50%;
     }
 }

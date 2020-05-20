@@ -5,7 +5,10 @@ import GoogleMap from "../Contact/GoogleMap";
 const ContactPreview = () => {
     return (
         <div className="contact-preview">
-            <GoogleMap />
+            <div className="building-img"></div>
+            <div>
+                <GoogleMap />
+            </div>
         </div>
     )
 }
