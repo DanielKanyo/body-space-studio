@@ -67,6 +67,7 @@ const Menu = (props) => {
                                 component={Link}
                                 to={route.path}
                                 className={classes.listItem}
+                                onClick={() => setDrawerVisibility(false)}
                                 key={i}
                             >
                                 <ListItemIcon>

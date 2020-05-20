@@ -12,7 +12,7 @@ const CarouselPreview = (props) => {
                 <div className="carousel-picture img1"></div>
 
                 <Carousel.Caption>
-                    <h3>Follow us on Instagram or like us on Facebook</h3>
+                    <h4>Follow us on Facebook and Instagram</h4>
                     <div>
                         <FacebookProvider appId="">
                             <Like href="https://www.facebook.com/bodyspacenovisad" layout="button_count" action="recommend" share />

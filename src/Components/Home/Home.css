@@ -11,7 +11,16 @@
 
 .carousel-picture.img1 {
     background-image: url("../../Images/IMG_3.jpg");
-    background-position: center 10%;
+    background-position: center 70%;
+}
+
+.carousel-caption h4 {
+    width: fit-content;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: rgba(24, 119, 242, 0.9);
+    border-radius: 5px;
 }
 
 .carousel-picture.img2 {
@@ -19,8 +28,8 @@
 }
 
 .carousel-picture.img3 {
-    background-image: url("../../Images/IMG_1.jpg");
-    background-position: 38% 40%;
+    background-image: url("../../Images/IMG_16.jpg");
+    background-position: 28% center;
 }
 
 .carousel-picture.img4 {
@@ -49,6 +58,7 @@
     background-size: cover;
     background-position: center 40%;
     background-attachment: fixed;
+    pointer-events: none;
 }
 
 .text-and-btn-container {
@@ -93,11 +103,11 @@
 }
 
 .pricelist-img.img1 {
-    background-image: url("../../Images/IMG_7.jpg");
+    background-image: url("../../Images/IMG_18.jpg");
 }
 
 .pricelist-img.img2 {
-    background-image: url("../../Images/IMG_4.jpg");
+    background-image: url("../../Images/IMG_15.jpg");
 }
 
 .pricelist-img.img3 {
@@ -147,7 +157,7 @@
     }
 
     .carousel-picture.img1 {
-        background-position: 40% 35%;
+        background-position: 75% 35%;
     }
 
     .carousel-picture.img2 {
@@ -177,6 +187,10 @@
     .button-container {
         flex-direction: column;
     }
+
+    .devices-image {
+        background-attachment: unset;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -190,5 +204,9 @@
     
     .building-img {
         width: 50%;
+    }
+
+    .carousel-caption h4 {
+        font-size: 18px;
     }
 }
