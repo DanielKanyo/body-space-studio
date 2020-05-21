@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -7,7 +8,7 @@ import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
     button: {
-        color: "white",
+        color: "white !important",
         borderColor: "white",
         outline: "none !important",
         margin: 10,
@@ -29,7 +30,7 @@ const PricelistPreview = () => {
             <div className="pricelist-img img3"></div>
 
             <div className="button-container">
-                <Button variant="outlined" size="large" classes={{ root: classes.button }}>
+                <Button variant="outlined" size="large" classes={{ root: classes.button }} component={Link} to="/pricelist">
                     Cenovnik
                 </Button>
                 <Button variant="outlined" size="large" classes={{ root: classes.button }}>

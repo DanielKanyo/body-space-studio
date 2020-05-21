@@ -16,7 +16,7 @@ export const Routes = [
     },
     {
         id: "pricelist",
-        path: "/",
+        path: "/pricelist",
         label: "Cenovnik"
     },
     {

@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import Devices from "../Devices/Devices";
+import Pricelist from "../Pricelist/Pricelist";
 
 const App = () => {
     return (
@@ -18,6 +19,9 @@ const App = () => {
                     </Route>
                     <Route exact path="/devices">
                         <Devices />
+                    </Route>
+                    <Route exact path="/pricelist">
+                        <Pricelist />
                     </Route>
                 </Switch>
 

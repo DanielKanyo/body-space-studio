@@ -2,6 +2,7 @@ import React from "react";
 
 import { FacebookProvider, Like } from "react-facebook";
 import Carousel from "react-bootstrap/Carousel";
+import { facebookApiKey } from "../../Constants/apiKeys";
 
 import "./Home.css";
 
@@ -14,7 +15,7 @@ const CarouselPreview = (props) => {
                 <Carousel.Caption>
                     <h4>Follow us on Facebook and Instagram</h4>
                     <div>
-                        <FacebookProvider appId="">
+                        <FacebookProvider appId={facebookApiKey}>
                             <Like href="https://www.facebook.com/bodyspacenovisad" layout="button_count" action="recommend" share />
                         </FacebookProvider>
                     </div>

@@ -1,0 +1,62 @@
+.Pricelist {
+    padding-top: 64px;
+    background: #7d5732;
+    color: white;
+}
+
+.pricelist-table {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pricelist-table table {
+    width: 60%;
+    table-layout: fixed;
+}
+
+.pricelist-table table tr:nth-child(odd) {
+    background-color: #714f2d;
+}
+
+.pricelist-table table tr td {
+    padding: 10px 20px;
+}
+
+.pricelist-table table tr td:nth-of-type(1) {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pricelist-table table tr td:nth-of-type(2) {
+    text-align: center;
+}
+
+.pricelist-table table tr td:nth-of-type(3) {
+    text-align: right;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media only screen and (max-width: 960px) {
+    .pricelist-table table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .pricelist-table table tr td:nth-of-type(1) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .pricelist-table table tr td:nth-of-type(3) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Pricelist {
+        padding-top: 56px;
+    }
+}
