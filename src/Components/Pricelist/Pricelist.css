@@ -45,6 +45,7 @@
     }
 
     .pricelist-table table tr td:nth-of-type(1) {
+        width: 50%;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
@@ -58,5 +59,9 @@
 @media only screen and (max-width: 600px) {
     .Pricelist {
         padding-top: 56px;
+    }
+
+    .pricelist-table table tr td {
+        padding: 10px;
     }
 }
