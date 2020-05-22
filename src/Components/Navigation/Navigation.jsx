@@ -10,7 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import Menu from "../Menu/Menu";
-import { Routes } from "../../Constants/routes";
+import { Routes, pathToHome } from "../../Constants/routes";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,7 +33,13 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     title: {
-        flexGrow: 1
+        flexGrow: 1,
+        color: "white",
+        fontWeight: "normal",
+        "&:hover": {
+            color: "#fff",
+            textDecoration: "none"
+        }
     },
     sectionDesktop: {
         display: "none",
@@ -58,7 +64,7 @@ const Navigation = () => {
         <div className={classes.root}>
             <AppBar position="static" className={classes.appbar}>
                 <Toolbar>
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography variant="h6" className={classes.title} component={Link} to={pathToHome}>
                         Body Space Studio
                     </Typography>
 

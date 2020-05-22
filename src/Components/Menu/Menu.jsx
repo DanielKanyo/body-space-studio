@@ -14,7 +14,14 @@ import EmailIcon from "@material-ui/icons/Email";
 import HelpIcon from "@material-ui/icons/Help";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 
-import { Routes } from "../../Constants/routes";
+import {
+    Routes,
+    home,
+    gallery,
+    devices,
+    pricelist,
+    contact
+} from "../../Constants/routes";
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -36,15 +43,15 @@ const Menu = (props) => {
 
     const listItemIconSwitch = (param) => {
         switch (param) {
-            case "home":
+            case home:
                 return <HomeIcon />;
-            case "gallery":
+            case gallery:
                 return <ImageIcon />;
-            case "devices":
+            case devices:
                 return <AirlineSeatFlatIcon />;
-            case "contact":
+            case contact:
                 return <EmailIcon />;
-            case "pricelist":
+            case pricelist:
                 return <MonetizationOnIcon />;
             default:
                 console.error(`Unknown paramtere: ${param}`);

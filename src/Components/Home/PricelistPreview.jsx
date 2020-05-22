@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
+import { pathToPricelist } from "../../Constants/routes";
 import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -30,7 +31,13 @@ const PricelistPreview = () => {
             <div className="pricelist-img img3"></div>
 
             <div className="button-container">
-                <Button variant="outlined" size="large" classes={{ root: classes.button }} component={Link} to="/pricelist">
+                <Button
+                    variant="outlined"
+                    size="large"
+                    classes={{ root: classes.button }}
+                    component={Link}
+                    to={pathToPricelist}
+                >
                     Cenovnik
                 </Button>
                 <Button variant="outlined" size="large" classes={{ root: classes.button }}>

@@ -1,0 +1,49 @@
+.Contact {
+    padding-top: 64px;
+    background: #7d5732;
+    color: white;
+}
+
+.Contact > div:first-of-type {
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px 0;
+}
+
+.icon-and-text-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(83, 54, 25, 0.4);
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.icon-and-text-container > div:first-of-type {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-and-text-container > div:last-of-type {
+    width: 80%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+    .Contact > div:first-of-type {
+        width: 100%;
+    }
+
+    .icon-and-text-container {
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Contact {
+        padding-top: 56px;
+    }
+}

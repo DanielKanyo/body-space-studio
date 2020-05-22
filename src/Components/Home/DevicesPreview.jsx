@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
+import { pathToDevices } from "../../Constants/routes";
 import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +30,7 @@ const DevicesPreview = () => {
                     <div className="text">Naše usluge i aparate</div>
                     <Button
                         component={Link}
-                        to="/devices"
+                        to={pathToDevices}
                         variant="outlined"
                         size="large"
                         classes={{ root: classes.button }}
