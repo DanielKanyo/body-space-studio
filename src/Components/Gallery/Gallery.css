@@ -1,0 +1,13 @@
+.Gallery {
+    padding-top: 64px;
+}
+
+.Gallery .grid-list-tile > div {
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Gallery {
+        padding-top: 56px;
+    }
+}

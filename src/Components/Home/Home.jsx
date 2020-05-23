@@ -22,7 +22,7 @@ const Home = () => {
             <CarouselPreview index={index} handleSelect={handleSelect} />
             <DevicesPreview />
             <PricelistPreview />
-            <ContactPreview />
+            <ContactPreview showButton={true} />
         </div>
     );
 };
