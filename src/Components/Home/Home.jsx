@@ -10,7 +10,7 @@ const Home = () => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
     }, []);
 
     const handleSelect = (selectedIndex, e) => {

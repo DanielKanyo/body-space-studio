@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import PlaceIcon from "@material-ui/icons/Place";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -22,6 +22,10 @@ const Contact = () => {
             text: "bodyspace1976@gmail.com"
         },
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const getContactIcon = (iconName) => {
         switch (iconName) {

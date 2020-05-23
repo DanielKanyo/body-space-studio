@@ -34,6 +34,8 @@ const Gallery = () => {
     const [mobileVisitor, setMobileVisitor] = useState(false);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         if (window.innerWidth < 600) {
             setMobileVisitor(true);
         }
