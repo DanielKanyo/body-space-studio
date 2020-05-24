@@ -46,8 +46,16 @@ const Gallery = () => {
     }, []);
 
     const openImage = (selectedPhotoIndex) => {
+        document.body.style.overflow = "hidden";
+
         setPhotoIndex(selectedPhotoIndex);
         setIsOpen(true);
+    }
+
+    const closeImage = () => {
+        document.body.style.overflow = "unset";
+
+        setIsOpen(false);
     }
 
     return (
@@ -79,7 +87,7 @@ const Gallery = () => {
                         mainSrc={gridImages[photoIndex].img}
                         nextSrc={gridImages[(photoIndex + 1) % gridImages.length].img}
                         prevSrc={gridImages[(photoIndex + gridImages.length - 1) % gridImages.length].img}
-                        onCloseRequest={() => setIsOpen(false)}
+                        onCloseRequest={() => closeImage(false)}
                         onMovePrevRequest={() => setPhotoIndex((photoIndex + gridImages.length - 1) % gridImages.length)}
                         onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % gridImages.length)}
                     />
