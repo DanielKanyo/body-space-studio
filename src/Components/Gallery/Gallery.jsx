@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 import { gridImages } from "../../Constants/gridImages";
 import "./Gallery.css";
@@ -31,7 +33,9 @@ const Gallery = () => {
     };
     const classes = useStyles();
 
-    const [mobileVisitor, setMobileVisitor] = useState(false);
+    const [isMobileVisitor, setMobileVisitor] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [photoIndex, setPhotoIndex] = useState(0);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -41,23 +45,46 @@ const Gallery = () => {
         }
     }, []);
 
+    const openImage = (selectedPhotoIndex) => {
+        setPhotoIndex(selectedPhotoIndex);
+        setIsOpen(true);
+    }
+
     return (
         <div className="Gallery">
             <div className={classes.root}>
                 <GridList
-                    cellHeight={!mobileVisitor ? cellHeight.desktopVisitor : cellHeight.mobileVisitor}
+                    cellHeight={!isMobileVisitor ? cellHeight.desktopVisitor : cellHeight.mobileVisitor}
                     className={classes.gridList}
                     cols={3}
                 >
                     {
                         gridImages.map((tile, i) => (
-                            <GridListTile className="grid-list-tile" key={i} cols={!mobileVisitor ? tile.cols : 3}>
+                            <GridListTile
+                                className="grid-list-tile"
+                                key={i}
+                                cols={!isMobileVisitor ? tile.cols : 3}
+                                onClick={() => openImage(i)}
+                            >
                                 <img src={tile.img} alt={tile.title} />
                             </GridListTile>
                         ))
                     }
                 </GridList>
             </div>
+
+            {
+                isOpen && (
+                    <Lightbox
+                        mainSrc={gridImages[photoIndex].img}
+                        nextSrc={gridImages[(photoIndex + 1) % gridImages.length].img}
+                        prevSrc={gridImages[(photoIndex + gridImages.length - 1) % gridImages.length].img}
+                        onCloseRequest={() => setIsOpen(false)}
+                        onMovePrevRequest={() => setPhotoIndex((photoIndex + gridImages.length - 1) % gridImages.length)}
+                        onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % gridImages.length)}
+                    />
+                )
+            }
         </div>
     )
 }
