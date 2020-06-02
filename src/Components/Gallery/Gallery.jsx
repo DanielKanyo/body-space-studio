@@ -4,10 +4,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import Lightbox from "react-image-lightbox";
+import Button from "@material-ui/core/Button";
 import "react-image-lightbox/style.css";
 
 import { gridImages } from "../../Constants/gridImages";
 import "./Gallery.css";
+
+const DEFAULT_NUMBER_OF_VISIBLE_IMAGES = 10;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,8 +18,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-around",
-        overflow: "hidden",
-        background: "#7d5732"
+        overflow: "hidden"
     },
     tile: {
         borderRadius: 5
@@ -24,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     gridList: {
         width: 1000
     },
+    moreBtn: {
+        marginTop: 15
+    }
 }));
 
 const Gallery = () => {
@@ -36,6 +41,7 @@ const Gallery = () => {
     const [isMobileVisitor, setMobileVisitor] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [photoIndex, setPhotoIndex] = useState(0);
+    const [numberOfVisibleImages, setNumberOfVisibleImages] = useState(DEFAULT_NUMBER_OF_VISIBLE_IMAGES);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -68,6 +74,7 @@ const Gallery = () => {
                 >
                     {
                         gridImages.map((tile, i) => (
+                            i < numberOfVisibleImages &&
                             <GridListTile
                                 className="grid-list-tile"
                                 key={i}
@@ -80,6 +87,18 @@ const Gallery = () => {
                     }
                 </GridList>
             </div>
+
+            {
+                numberOfVisibleImages < gridImages.length &&
+                <Button
+                    variant="contained"
+                    className={classes.moreBtn}
+                    onClick={() => setNumberOfVisibleImages(numberOfVisibleImages + DEFAULT_NUMBER_OF_VISIBLE_IMAGES)}
+                >
+                    Više slika
+                </Button>
+            }
+
 
             {
                 isOpen && (

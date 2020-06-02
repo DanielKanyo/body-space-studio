@@ -1,5 +1,7 @@
 .Gallery {
     padding-top: 64px;
+    background: #7d5732;
+    text-align: center;
 }
 
 .Gallery .grid-list-tile > div {
