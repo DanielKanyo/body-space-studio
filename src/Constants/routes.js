@@ -24,7 +24,7 @@ export const Routes = [
     {
         id: devices,
         path: pathToDevices,
-        label: "Usluge i Aparate"
+        label: "Usluge"
     },
     {
         id: pricelist,

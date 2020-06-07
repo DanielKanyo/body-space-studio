@@ -27,7 +27,7 @@ const DevicesPreview = () => {
             <div className="devices-image"></div>
             <div className="content">
                 <div className="text-and-btn-container">
-                    <div className="text">Naše usluge i aparate</div>
+                    <div className="text">Naše usluge</div>
                     <Button
                         component={Link}
                         to={pathToDevices}
