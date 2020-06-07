@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import CookieConsent from "react-cookie-consent";
+
 import Home from "../Home/Home";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
@@ -58,6 +60,10 @@ const App = () => {
 
                 <Footer />
             </div>
+
+            <CookieConsent buttonText="Slažem se">
+                Ova web stranica koristi Cookie-je da bi obezbedio dobro korisničko iskustvo.
+            </CookieConsent>
         </Router>
     );
 };
