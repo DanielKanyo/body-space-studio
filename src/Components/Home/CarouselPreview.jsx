@@ -14,7 +14,7 @@ const CarouselPreview = (props) => {
 
                 <Carousel.Caption>
                     <h4>Follow us on Facebook and Instagram</h4>
-                    <div>
+                    <div className='fb-container'>
                         <FacebookProvider appId={facebookApiKey}>
                             <Like href="https://www.facebook.com/bodyspacenovisad" layout="button_count" action="recommend" share />
                         </FacebookProvider>

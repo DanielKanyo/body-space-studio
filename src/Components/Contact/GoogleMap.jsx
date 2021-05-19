@@ -14,10 +14,10 @@ const GoogleMap = (props) => {
                 google={props.google}
                 style={style}
                 initialCenter={{
-                    lat: 45.252460,
-                    lng: 19.836398
+                    lat: 46.09748544750197,
+                    lng: 19.662706344621036
                 }}
-                zoom={17}
+                zoom={18}
             >
                 <Marker title={"Ognjena Price 1 | Novi Sad"} />
             </Map>

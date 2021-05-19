@@ -145,6 +145,14 @@
     background-position: center 0%;
 }
 
+.fb-container span {
+    width: 180px !important;
+}
+
+.fb-container iframe {
+    width: 180px !important;
+}
+
 @media only screen and (max-width: 1420px) {
     .carousel-picture {
         height: 650px;

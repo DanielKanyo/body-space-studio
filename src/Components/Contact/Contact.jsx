@@ -11,7 +11,7 @@ const Contact = () => {
     const contactData = [
         {
             icon: "place",
-            text: "Ognjena Price 1. I sprat, stan 2. | Novi Sad 21000"
+            text: "Petra Drapšina 27 | Novi Sad 21000"
         },
         {
             icon: "phone",
