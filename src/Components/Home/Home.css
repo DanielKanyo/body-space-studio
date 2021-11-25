@@ -10,8 +10,8 @@
 }
 
 .carousel-picture.img1 {
-    background-image: url("../../Images/IMG_3.jpg");
-    background-position: center 70%;
+    background-image: url("../../Images/IMG_53.jpeg");
+    background-position: center 40%;
 }
 
 .carousel-caption h4 {
@@ -24,16 +24,16 @@
 }
 
 .carousel-picture.img2 {
-    background-image: url("../../Images/IMG_2.jpg");
+    background-image: url("../../Images/IMG_48.jpeg");
 }
 
 .carousel-picture.img3 {
-    background-image: url("../../Images/IMG_16.jpg");
+    background-image: url("../../Images/IMG_49.jpeg");
     background-position: 28% center;
 }
 
 .carousel-picture.img4 {
-    background-image: url("../../Images/IMG_7.jpg");
+    background-image: url("../../Images/IMG_47.jpeg");
     background-position: center;
 }
 

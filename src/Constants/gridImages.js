@@ -36,8 +36,74 @@ import img40 from "../Images/IMG_40.jpg";
 import img41 from "../Images/IMG_41.jpg";
 import img42 from "../Images/IMG_42.jpg";
 import img43 from "../Images/IMG_43.jpg";
+import img44 from "../Images/IMG_44.jpeg";
+import img45 from "../Images/IMG_45.jpeg";
+import img46 from "../Images/IMG_46.jpeg";
+import img47 from "../Images/IMG_47.jpeg";
+import img48 from "../Images/IMG_48.jpeg";
+import img49 from "../Images/IMG_49.jpeg";
+import img50 from "../Images/IMG_50.jpeg";
+import img51 from "../Images/IMG_51.jpeg";
+import img52 from "../Images/IMG_52.jpeg";
+import img53 from "../Images/IMG_53.jpeg";
+import img54 from "../Images/IMG_54.jpeg";
 
 export const gridImages = [
+    {
+        img: img44,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img45,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img46,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img47,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img48,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img49,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img50,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img51,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img52,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img53,
+        title: "body-space-studio",
+        cols: 1,
+    },
+    {
+        img: img54,
+        title: "body-space-studio",
+        cols: 1,
+    },
     {
         img: img2,
         title: "body-space-studio",
